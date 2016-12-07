@@ -1,0 +1,13 @@
+{% extends 'MainBundle::base.html.twig' %}
+
+{% block body %}
+<h2>
+    Hola <b>{{ name|upper }}</b>!
+    <br/>
+    {% for i in 1..10 %}
+        <div>
+            <a href="{{ path("index_user", {'name' : i}) }}">Hello {{ i }}</a>
+        </div>
+    {% endfor %}
+</h2>
+{% endblock %}
